@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Poker HTMLClient - Presentation</title>
+	<link rel="stylesheet" type="text/css" href="slide.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../js/libs/underscore/underscore.js"></script>
+	<script type="text/javascript" src="../js/libs/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../js/libs/backbone/backbone.js"></script>
+    <script type="text/javascript" src="../js/libs/handlebars/handlebars-1.0.0.beta.6.js"></script>
+    <script type="text/javascript" src="ppt.js"></script>
+    <script type="text/javascript" src="SlideViewModel.js"></script>
+     <script type="text/x-handlebar-template" id="slideTemplate">
+        <div class="slide {{slideClass}}">
+            <div class="slide-header"></div>
+            <header>{{header}}</header>
+            <section class={{sectionClass}}></section>
+        </div>        
+    </script>
+</head>
+<body>
+	<div class="presentation">
+        <button id="page-switcher-start" class="page-switcher custom-appearance" tabindex="2" style="width: 100px; left: 0px; top: 0px; padding-bottom: 0px; "><li></li></button>
+        <div class="slides" style="display: block; "></div>
+        <button id="page-switcher-end" class="page-switcher custom-appearance" tabindex="2" style="text-align:right;width: 100px; left:auto;right: 0px; top: 0px; padding-bottom: 0px; "><li></li></button>
+    </div>
+</body>
+<html>
