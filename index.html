@@ -42,13 +42,15 @@
 <li>backbone</li>
 <li>underscore</li>
 <li>handlebars</li>
-</ul><h3>HTMLSlide API's and Slide Template</h3>
+</ul><p>Please have little knowledge on these frameworks for easy understanding.</p>
+
+<h3>HTMLSlide API's and Slide Template</h3>
 
 <h4>API</h4>
 
-<p><code>createSlide</code></p>
+<p><code>createSlide</code> : This will create &amp; returns backbone view for the slide.</p>
 
-<p>Parameters (JSON object):  </p>
+<p>Parameters (as JSON object):  </p>
 
 <ul>
 <li>
@@ -61,11 +63,11 @@
 <strong>slideTemplate</strong> -  HTML template for the slide ,</li>
 <li>
 <strong>content</strong>       - content of the slide ( HTML, text, image)</li>
-</ul><p>returns : Backbone view of SlideView</p>
+</ul><p>returns : Backbone view of a Slide</p>
 
 <p><code>createSlidePoints</code></p>
 
-<p>Parameters (JSON object):  </p>
+<p>Parameters:  </p>
 
 <ul>
 <li>
@@ -78,8 +80,18 @@
 
 <h3>How to create Slide</h3>
 
-<p>Load the htmlslide.js as part of the prerequisites. It will return you the HTMLSlide class to the window object. Create a instance of it. Use the 
-Still in Progress</p>
+<p>Load the htmlslide.js as part of the prerequisites. It will return you the HTMLSlide class to the window object. Create a instance of it by passing the html element present in your dom. Use the </p>
+
+<pre><code>//Slide 1
+var htmlSlide = new HTMLSlide($('.slides'));
+var slide1 = htmlSlide.createSlide({
+    slideClass : "current",
+    header : "", 
+    sectionClass : "middle", 
+    slideTemplate : slideTemplate,
+    content : '&lt;p style="font-size:35px&gt;HTML Slide Application&lt;/p&gt;&lt;p&gt;Using Backbone &amp; Jquery&lt;/p&gt;'
+});
+</code></pre>
 
 <h3>Authors and Contributors</h3>
 
