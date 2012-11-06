@@ -48,7 +48,7 @@
 
 <h4>API</h4>
 
-<p><code>createSlide</code> : This will create &amp; returns backbone view for the slide.</p>
+<p>**createSlide **: This will create &amp; returns backbone view for the slide.</p>
 
 <p>Parameters (as JSON object):  </p>
 
@@ -65,7 +65,7 @@
 <strong>content</strong>       - content of the slide ( HTML, text, image)</li>
 </ul><p>returns : Backbone view of a Slide</p>
 
-<p><code>createSlidePoints</code></p>
+<p><strong>createSlidePoints</strong> : This will create a list of points on the slide</p>
 
 <p>Parameters:  </p>
 
@@ -76,7 +76,7 @@
 <strong>SlideView</strong>    - Object returned with this 'createSlide', </li>
 </ul><p>returns : undefined</p>
 
-<h5>Template</h5>
+<h4>Template</h4>
 
 <pre><code>    &lt;div class="slide {{slideClass}}"&gt;
         &lt;div class="slide-header"&gt;&lt;/div&gt;
@@ -99,7 +99,7 @@ var slide1 = htmlSlide.createSlide({
     header : "", 
     sectionClass : "middle", 
     slideTemplate : slideTemplate,
-    content : '&lt;p style="font-size:35px&gt;HTML Slide Application&lt;/p&gt;&lt;p&gt;Using Backbone &amp; Jquery&lt;/p&gt;'
+    content : '&lt;p&gt;HTML Slide Application using Backbone&lt;/p&gt;'
 });
 </code></pre>
 
