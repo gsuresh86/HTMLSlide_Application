@@ -33,7 +33,7 @@
       <section id="main_content" class="inner">
         <h3>Welcome to HTML Slide</h3>
 
-<p>This is a simple application built on backbone and jquery for making presentation slides on HTML.If you don't have MS PowerPoint , you can use this. </p>
+<p>This is a simple application built on top of backbone and jquery for making presentation slides on HTML.If you don't have MS PowerPoint , you can use this. Download all the files from the source. Open the index.html in browser. You will see presentation with some sample slide in html page.</p>
 
 <h3>Prerequisites</h3>
 
@@ -44,7 +44,7 @@
 <li>handlebars</li>
 </ul><p>Please have little knowledge on these frameworks for easy understanding.</p>
 
-<h3>HTMLSlide API's and Slide Template</h3>
+<h3>HTMLSlide  API's and Template</h3>
 
 <h4>API</h4>
 
@@ -76,11 +76,21 @@
 <strong>SlideView</strong>    - Object returned with this 'createSlide', </li>
 </ul><p>returns : undefined</p>
 
-<h4>Template</h4>
+<h5>Template</h5>
+
+<pre><code>    &lt;div class="slide {{slideClass}}"&gt;
+        &lt;div class="slide-header"&gt;&lt;/div&gt;
+        &lt;header&gt;{{header}}&lt;/header&gt;
+        &lt;section class={{sectionClass}}&gt;&lt;/section&gt;
+        &lt;span class="counter"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<p>Add this template inside a script tag and use it while creating slide.</p>
 
 <h3>How to create Slide</h3>
 
-<p>Load the htmlslide.js as part of the prerequisites. It will return you the HTMLSlide class to the window object. Create a instance of it by passing the html element present in your dom. Use the </p>
+<p>Load the htmlslide.js as part of the prerequisites in your page. It will return you the HTMLSlide class available in the window context. Create a instance of it by passing a html element present in your dom. Use the </p>
 
 <pre><code>//Slide 1
 var htmlSlide = new HTMLSlide($('.slides'));
