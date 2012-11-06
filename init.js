@@ -72,27 +72,46 @@ function openClient(){
 document.addEventListener('keydown', function(e) { handleKeys(e); }, false);
 
 $(document).ready(function(){
+    
+    var htmlSlide = new HTMLSlide($('.slides'));
+
     //Slide 1
-    var slideModel = new SlideModel({slideClass : "current", header : "", sectionClass : "middle"});
-    var slideView = new SlideView({model : slideModel,el : $('.slides'),  slideTemplate : slideTemplate});
-    slideView.render('<p class="">HTML Slide Application</p><p style="font-size:35px">Using Backbone & Jquery</p>');
+    var slide1 = htmlSlide.createSlide({
+        slideClass : "current",
+        header : "", 
+        sectionClass : "middle", 
+        slideTemplate : slideTemplate,
+        content : '<p class="">HTML Slide Application</p><p style="font-size:35px">Using Backbone & Jquery</p>'
+    });
 
     //Prerequisites
-    slideModel = new SlideModel({slideClass : "future", header : "Prerequisites", sectionClass : ""});
-    slideView = new SlideView({model : slideModel,el : $('.slides'),  slideTemplate : slideTemplate});
-    slideView.render('<ul> <li><span class="key">*</span> <span>Underscore</span></li> <li><span class="key">*</span> <span>Backbone</span></li> <li><span class="key">*</span> <span>Jquery</span></li> <li><span class="key">*</span> <span>Handlerbars</span></li></ul>');
+    //Slide 2
+    var slide2 = htmlSlide.createSlide({
+        slideClass : "future",
+        header : "Prerequisites", 
+        sectionClass : "", 
+        slideTemplate : slideTemplate,
+        content : ''
+    });
 
-    
-    //Thank You
-    slideModel = new SlideModel({slideClass : "future", header : "", sectionClass : "last-section"});
-    slideView = new SlideView({model : slideModel,el : $('.slides'),  slideTemplate : slideTemplate});
-    slideView.render('THANK YOU');
+    var pointsArr = ['Underscore', 'Jquery', 'Backbone', 'Handlerbars'];
+    htmlSlide.createSlidePoints(pointsArr, slide2);    
+
+    //Thank you
+    //Slide 3
+    htmlSlide.createSlide({
+        slideClass : "future",
+        header : "", 
+        sectionClass : "last-section", 
+        slideTemplate : slideTemplate,
+        content : 'Thank You'
+    });
 
 
     $('#page-switcher-start').on("click", prev);
     $('#page-switcher-end').on("click", next);
     $('.openDemo').on("click", openClient);
     noOfSlide = $('.slides .slide').length;
-    $('#langList')[0].options[0].focus();
+    
 
 });
