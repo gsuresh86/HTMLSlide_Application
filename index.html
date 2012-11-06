@@ -46,21 +46,33 @@
 
 <h4>API</h4>
 
-<p><code>createSlide</code>
-pass the following parameter as json object </p>
+<p><code>createSlide</code></p>
+
+<p>Parameters (JSON object):  </p>
 
 <ul>
 <li>
 <strong>slideClass</strong>    - css classname for slide main div,</li>
 <li>
-<strong>header</strong>        - title appears on top of the slide "", </li>
+<strong>header</strong>        - title appears on top of the slide, </li>
 <li>
-<strong>sectionClass</strong>  - css classname for the content div of the slide", </li>
+<strong>sectionClass</strong>  - css classname for the content div of the slide, </li>
 <li>
 <strong>slideTemplate</strong> -  HTML template for the slide ,</li>
 <li>
 <strong>content</strong>       - content of the slide ( HTML, text, image)</li>
-</ul><p><code>createSlidePoints</code></p>
+</ul><p>returns : Backbone view of SlideView</p>
+
+<p><code>createSlidePoints</code></p>
+
+<p>Parameters (JSON object):  </p>
+
+<ul>
+<li>
+<strong>pointsArr</strong>    - Array of strings ( points ),</li>
+<li>
+<strong>SlideView</strong>    - Object returned with this 'createSlide', </li>
+</ul><p>returns : undefined</p>
 
 <h4>Template</h4>
 
